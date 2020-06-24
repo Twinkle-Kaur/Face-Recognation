@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="619.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FXController">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="frame" fitHeight="364.0" fitWidth="475.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Separator layoutX="6.0" layoutY="10.0" prefHeight="6.0" prefWidth="500.0" />
+           
+         </children></AnchorPane>
+   </center>
+   <top>
+      <VBox prefHeight="40.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <CheckBox fx:id="haar" mnemonicParsing="false" onAction="#haarSelected" text="Haar Classifier">
+                     <HBox.margin>
+                        <Insets left="100.0" right="70.0" top="20.0" />
+                     </HBox.margin>
+                  </CheckBox>
+                  <CheckBox fx:id="lbp" mnemonicParsing="false" onAction="#lbpSelected" text="LBP Classifier">
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </CheckBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <VBox prefHeight="178.0" prefWidth="530.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="camBtn" disable="true" mnemonicParsing="false" onAction="#startCamera" text="Start Camera">
+                     <HBox.margin>
+                        <Insets left="100.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="58.0" prefWidth="530.0">
+               <children>
+                  <CheckBox fx:id="newUser" disable="true" mnemonicParsing="false" onAction="#newUserSelected" text="New User">
+                     <HBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </HBox.margin>
+                  </CheckBox>
+                  <TextField fx:id="newUserName" promptText="Enter Name">
+                     <HBox.margin>
+                        <Insets left="15.0" top="25.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="regBtn" disable="true" mnemonicParsing="false" onAction="#register" text="Register">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="60.0" prefWidth="530.0">
+               <children>
+                  <Button fx:id="recBtn" disable="true" mnemonicParsing="false" onAction="#detectAndDisplay" text="Recognize">
+                     <HBox.margin>
+                        <Insets bottom="20.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="100.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
